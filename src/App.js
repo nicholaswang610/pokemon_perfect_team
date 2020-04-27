@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route,Switch} from 'react-router-dom';
 import Navbar from './Navbar.js';
 import Home from './Home.js';
 import Team from './Team.js'
@@ -12,8 +12,11 @@ class App extends Component
       <BrowserRouter>
         <div className="App">
           <Navbar></Navbar>
-          <Route exact path="/" component={Home}></Route>
-          <Route exact path="/my-team" component={Team}></Route>
+          <Switch>
+            <Route exact path="/" component={Home}></Route>
+            <Route path="/my-team" component={Team}></Route>
+          </Switch>
+          
         </div>
       </BrowserRouter>
       
@@ -21,3 +24,4 @@ class App extends Component
   }
 }
 export default App;
+
