@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import axios from 'axios';
 import Pokemon from './Pokemon.js';
-
+import {withRouter} from 'react-router-dom';
 class Home extends Component
 {
     componentDidMount(){
@@ -20,7 +20,6 @@ class Home extends Component
     }
 
     render(){
-        console.log(this.props.pokemon);
         return <div>
             <Pokemon pokemon={this.props.pokemon}/>
         </div>
@@ -41,4 +40,4 @@ const mapDispatchToProps = (dispatch) => {
         }
     );
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));
