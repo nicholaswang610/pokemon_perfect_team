@@ -20,11 +20,29 @@ class Home extends Component
     }
 
     render(){
-        return <div>
+        console.log(this.props.pokemon);
+        return <div className='container border my-3'>
+            <p className="box-title text-center name">Choose your team</p>
             <Pokemon pokemon={this.props.pokemon}/>
         </div>
     }
 }
+
+const mapStateToProps = (state, ownProps) => {
+    return (
+        {
+            pokemon: state.pokemon
+        }
+    );
+}
+const mapDispatchToProps = (dispatch) => {
+    return(
+        {
+            initializePokemon: (pokemon,index) => {dispatch({type:"INITIALIZE", pokemon:pokemon, id:index})},
+        }
+    );
+}
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Home));
 
 const mapStateToProps = (state, ownProps) => {
     return (
