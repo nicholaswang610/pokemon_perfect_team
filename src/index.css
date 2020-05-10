@@ -1,3 +1,8 @@
+@font-face{
+  font-family: name;
+  src:url('./fonts/Pokemon\ Classic.ttf');
+
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -24,7 +29,7 @@ code {
 
 .portrait.chosen{
    border-radius: 25px;
-   background: #73AD21;
+   background: rgba(63, 200, 61, 0.3);
    padding: 20px;
     width: 150px;
    height: 150px;
@@ -34,10 +39,39 @@ code {
 
 .portrait{
   border-radius: 25px;
-  background: rgba(255,255,255,255);
   padding: 20px;
    width: 150px;
   height: 150px;
  margin-left: 5px;
  margin-right: 5px;
+}
+
+.name{
+  font-family:name;
+}
+
+.box-title{
+  position:absolute;
+  top: 110px;
+  background-color:white;
+}
+
+.logo{
+  width:50;
+  height:50;
+}
+
+.cart{
+  position:relative;
+
+}
+.track-cart-items{
+  height: 17px;
+  width: 17px;
+  text-align:center;
+  line-height: 1.05;
+  background-color: rgba(63, 200, 61, 0.3);
+  border-radius: 50%;
+  position:absolute;
+  display: inline-block;
 }
