@@ -10,6 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:#343a40;
 }
 
 code {
@@ -53,7 +54,7 @@ code {
 .box-title{
   position:absolute;
   top: 110px;
-  background-color:white;
+  color:white;
 }
 
 .logo{
@@ -74,4 +75,91 @@ code {
   border-radius: 50%;
   position:absolute;
   display: inline-block;
+}
+
+td{
+  padding-right: 10px;
+}
+
+.type{
+  position:relative;
+  left:10em;
+  top:2.5em;
+  display:inline-block;
+  background-repeat:no-repeat;
+  background-image:url('./images/types.png');
+  width:3.1em;
+  height:1.1em;
+}
+
+.multiple-types{
+  position:relative;
+  left:9em;
+  top:2.5em;
+  display:inline-block;
+  background-repeat:no-repeat;
+  background-image:url('./images/types.png');
+  width:3.1em;
+  height:1.1em;
+}
+
+.type.fighting,.multiple-types.fighting{
+  background-position:0em 0em;
+}
+.type.fire,.multiple-types.fire{
+  background-position:0em -1.15em;
+}
+.type.flying,.multiple-types.flying{
+  background-position:0em -2.25em;
+}
+.type.grass,.multiple-types.grass{
+  background-position:0em -3.35em;
+}
+.type.normal,.multiple-types.normal{
+  background-position:0em -4.45em;
+}
+.type.water,.multiple-types.water{
+  background-position:0em -5.55em;
+}
+.type.bug,.multiple-types.bug{
+  background-position:-3.1em 0em;
+}
+.type.electric,.multiple-types.electric{
+  background-position:-3.1em -1.15em;
+}
+.type.ghost,.multiple-types.ghost{
+  background-position:-3.1em -2.25em;
+}
+.type.ground,.multiple-types.ground{
+  background-position:-3.1em -3.35em;
+}
+.type.poison,.multiple-types.poison{
+  background-position:-3.1em -4.45em;
+}
+.type.rock,.multiple-types.rock{
+  background-position:-3.1em -5.55em;
+}
+.type.dark,.multiple-types.dark{
+  background-position:-6.2em 0em;
+}
+.type.dragon,.multiple-types.dragon{
+  background-position:-6.2em -1.15em;
+}
+.type.fairy,.multiple-types.fairy{
+  background-position:-6.2em -2.25em;
+}
+.type.ice,.multiple-types.ice{
+  background-position:-6.2em -3.35em;
+}
+.type.psychic,.multiple-types.psychic{
+  background-position:-6.2em -4.45em;
+}
+.type.steel,.multiple-types.steel{
+  background-position:-6.2em -5.55em;
+}
+
+.details{
+  position:relative;
+  margin-left:15%;
+  line-height:0em;
 }
