@@ -10,21 +10,35 @@ class Team extends Component
             {
                 return (
                 <div key={pokemon.data.id} className="member">
+                    <img className="pokeball" src={require('./images/pokeball.png')} alt="pokeball"></img>
                     <span className={"multiple-types " + pokemon.data.types[0].type.name}></span>
                     <span className={"multiple-types " + pokemon.data.types[1].type.name}></span>
                     <div className="details px-2 py-3 text-left">
                         <img alt={pokemon.data.name} src={pokemon.data.sprites.front_default}/>
-                        <p className='name text-light'>{pokemon.data.name}</p>
+                        <span className="stat digi-text hp">{"hp: " + pokemon.data.stats[5].base_stat} </span>
+                        <span className="stat digi-text  attack">{"attack: " + pokemon.data.stats[4].base_stat}</span>
+                        <span className="stat digi-text  defense">{"defense: " + pokemon.data.stats[3].base_stat }</span>
+                        <span className="stat digi-text  sattack">{"sp. att: " + pokemon.data.stats[2].base_stat}</span>
+                        <span className="stat digi-text  sdefense">{"sp. def: " + pokemon.data.stats[1].base_stat}</span>
+                        <span className="stat digi-text  speed">{"speed: " + pokemon.data.stats[0].base_stat}</span>
+                        <p className='text-light digi-text '>{pokemon.data.name.toUpperCase()}</p>
                     </div>
                 </div>);
             }else if(pokemon.data.types.length === 1)
             {
                 return(
                     <div key={pokemon.data.id} className="member">
+                        <img className="pokeball" src={require('./images/pokeball.png')} alt="pokeball"></img>
                         <span className={"type " + pokemon.data.types[0].type.name}></span>
                         <div className="details px-2 py-3 text-left">
                             <img alt={pokemon.data.name} src={pokemon.data.sprites.front_default}/>
-                            <p className='name text-light'>{pokemon.data.name}</p>
+                            <span className="stat digi-text hp">{"hp: " + pokemon.data.stats[5].base_stat} </span>
+                            <span className="stat digi-text  attack">{"attack: " + pokemon.data.stats[4].base_stat}</span>
+                            <span className="stat digi-text  defense">{"defense: " + pokemon.data.stats[3].base_stat }</span>
+                            <span className="stat digi-text  sattack">{"sp. att: " + pokemon.data.stats[2].base_stat}</span>
+                            <span className="stat digi-text  sdefense">{"sp. def: " + pokemon.data.stats[1].base_stat}</span>
+                            <span className="stat digi-text  speed">{"speed: " + pokemon.data.stats[0].base_stat}</span>
+                            <p className='digi-text text-light'>{pokemon.data.name.toUpperCase()}</p>
                         </div>
                     </div>);
             }else{
