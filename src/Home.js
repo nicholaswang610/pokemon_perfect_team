@@ -22,7 +22,7 @@ class Home extends Component
     render(){
         console.log(this.props.pokemon);
         return <div className='container border my-3'>
-            <p className="box-title text-center name bg-dark px-1">Choose your team</p>
+            <p className="box-title text-center digi-text bg-dark px-1">Choose your team</p>
             <Pokemon pokemon={this.props.pokemon}/>
         </div>
     }
