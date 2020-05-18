@@ -1,5 +1,5 @@
 @font-face{
-  font-family: name;
+  font-family: digi-text;
   src:url('./fonts/Pokemon\ Classic.ttf');
 
 }
@@ -47,8 +47,8 @@ code {
  margin-right: 5px;
 }
 
-.name{
-  font-family:name;
+.digi-text{
+  font-family:digi-text;
 }
 
 .box-title{
@@ -162,4 +162,51 @@ td{
   position:relative;
   margin-left:15%;
   line-height:0em;
+}
+.member{
+  overflow: hidden;
+  position:relative;
+  border-radius:40px;
+  background-image:linear-gradient(green 50%, #009933  50%);
+}
+.pokeball{
+  position:absolute;
+  height:auto;
+  width:auto;
+  max-width:200px;
+  max-height:200px;
+  left:-50px;
+  top:20px;
+  transform:scaleX(-1);
+  transform:rotate(20deg);
+}
+
+.stat{
+  position:absolute;
+}
+
+.stat.hp{
+  left:25%;
+}
+
+.stat.attack{
+  left:40%;
+}
+
+.stat.defense{
+  left:65%;
+}
+
+.stat.sattack{
+  top:70%;
+  left:25%;
+}
+
+.stat.sdefense{
+  top:70%;
+  left: 50%;
+}
+.stat.speed{
+  top:70%;
+  left:75%;
 }
